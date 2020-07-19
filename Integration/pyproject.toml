@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Integration"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/integration"
+license = "BSD license"
+author = 'Jane Developer'
+author_email = "jane@example.com"
+
+[tool.briefcase.app.integration]
+formal_name = "Integration"
+description = "Mini Project Sixth Semester"
+icon = "src/integration/resources/integration"
+sources = ['src/integration']
+requires = []
+
+
+[tool.briefcase.app.integration.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.integration.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.integration.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.integration.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.integration.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
