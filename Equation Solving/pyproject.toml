@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Equation Solving"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/equationsolving"
+license = "BSD license"
+author = 'Jane Developer'
+author_email = "jane@example.com"
+
+[tool.briefcase.app.equationsolving]
+formal_name = "Equation Solving"
+description = "My first application"
+icon = "src/equationsolving/resources/equationsolving"
+sources = ['src/equationsolving']
+requires = []
+
+
+[tool.briefcase.app.equationsolving.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.equationsolving.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.equationsolving.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.equationsolving.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.equationsolving.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
