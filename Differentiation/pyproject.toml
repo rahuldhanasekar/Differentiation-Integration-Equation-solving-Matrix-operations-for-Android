@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Differentiation"
+bundle = "com.example"
+version = "0.0.1"
+url = "https://example.com/Differentiation"
+license = "BSD license"
+author = 'Rahul Dhanasekar'
+author_email = "rahul@example.com"
+
+[tool.briefcase.app.Differentiation]
+formal_name = "Differentiation"
+description = "Mini Project Sixth Semester"
+icon = "src/Differentiation/resources/Differentiation"
+sources = ['src/Differentiation']
+requires = []
+
+
+[tool.briefcase.app.Differentiation.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.Differentiation.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.Differentiation.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.Differentiation.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.Differentiation.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
